@@ -1,7 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>TOURISM</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tourism Website</title>
 
     <style>
 
@@ -9,7 +11,10 @@
             margin:0;
             padding:0;
             box-sizing:border-box;
+            font-family:Arial, sans-serif;
         }
+
+        /* NAVBAR */
 
         nav{
             background-color:black;
@@ -17,6 +22,7 @@
             display:flex;
             justify-content:space-between;
             align-items:center;
+            flex-wrap:wrap;
         }
 
         .logo{
@@ -29,6 +35,7 @@
             list-style:none;
             display:flex;
             gap:30px;
+            flex-wrap:wrap;
         }
 
         ul li a{
@@ -40,154 +47,333 @@
         ul li a:hover{
             color:lightgray;
         }
+
+        /* HERO SECTION */
+
         .s1{
-    height:500px;
-    background-image:
-    linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-    url('tour.avif');
+            height:90vh;
 
-    background-size:cover;
-    background-position:center;
+            background-image:
+            linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+            url('tour.avif');
 
-    display:flex;
-    justify-content:center;
-    align-items:center;
+            background-size:cover;
+            background-position:center;
 
-    text-align:center;
-    color:rgb(197, 191, 191);
-}
+            display:flex;
+            justify-content:center;
+            align-items:center;
 
-.content h1{
-    font-size:50px;
-    margin-bottom:20px;
-}
+            text-align:center;
+            color:white;
+            padding:20px;
+        }
 
-.content p{
-    font-size:20px;
-    margin-bottom:25px;
-}
+        .content h1{
+            font-size:50px;
+            margin-bottom:20px;
+        }
 
-.btn1,
-.btn2{
-    padding:12px 25px;
-    border:none;
-    font-size:16px;
-    margin:10px;
-    cursor:pointer;
-}
+        .content p{
+            font-size:20px;
+            margin-bottom:25px;
+        }
 
-.btn1{
-    background-color:white;
-    color:black;
-}
+        .btn1,
+        .btn2{
+            padding:12px 25px;
+            border:none;
+            font-size:16px;
+            margin:10px;
+            cursor:pointer;
+            border-radius:5px;
+        }
 
-.btn2{
-    background-color:orange;
-    color:white;
-}
-.s2{
-    width:100%;
-    display:flex;
-    justify-content:space-around;
-    align-items:center;
-    padding:10px 0px;
-    background:white;
-}
+        .btn1{
+            background-color:white;
+            color:black;
+        }
 
-.s2-img img{
-    width:700px;
-}
+        .btn2{
+            background-color:orange;
+            color:white;
+        }
 
-.s2-text{
-    width:50%;
-}
+        /* ABOUT SECTION */
 
-.s2-text h4{
-    color:gray;
-    margin-bottom:10px;
-}
+        .s2{
+            width:100%;
+            display:flex;
+            justify-content:space-around;
+            align-items:center;
+            gap:40px;
+            padding:60px 40px;
+            background:white;
+            flex-wrap:wrap;
+        }
 
-.s2-text h1{
-    font-size:45px;
-    margin-bottom:20px;
-    color:black;
-}
+        .s2-img img{
+            width:100%;
+            max-width:600px;
+            border-radius:10px;
+        }
 
-.s2-text p{
-    font-size:17px;
-    color:dimgray;
-    line-height:28px;
-    margin-bottom:15px;
-}
+        .s2-text{
+            flex:1;
+            min-width:300px;
+        }
 
-.s2-text button{
-    padding:12px 25px;
-    background:navy;
-    color:white;
-    border:none;
-}
-.footer
-{
-    width:100%;
-    background:black;
-    color:white;
-    text-align:center;
-    padding:20px;
-    font-size:18px;
-}
-.s3>div{
-display:flex;
-justify-content: start;
-align-items: flex-start;
+        .s2-text h4{
+            color:gray;
+            margin-bottom:10px;
+        }
 
-}
-.card-img-top{
-    height: 100%;
-    width: 100%;
-}
+        .s2-text h1{
+            font-size:45px;
+            margin-bottom:20px;
+            color:black;
+        }
+
+        .s2-text p{
+            font-size:17px;
+            color:dimgray;
+            line-height:28px;
+            margin-bottom:15px;
+        }
+
+        .s2-text button{
+            padding:12px 25px;
+            background:navy;
+            color:white;
+            border:none;
+            border-radius:5px;
+            cursor:pointer;
+        }
+
+        /* CARDS SECTION */
+
+        .s3{
+            padding:60px 40px;
+            background:#f5f5f5;
+            text-align:center;
+        }
+
+        .s3 h1{
+            margin-bottom:40px;
+            font-size:40px;
+        }
+
+        .cards{
+            display:grid;
+            grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
+            gap:30px;
+        }
+
+        .card{
+            background:white;
+            border-radius:10px;
+            overflow:hidden;
+            box-shadow:0 4px 10px rgba(0,0,0,0.2);
+            transition:0.3s;
+        }
+
+        .card:hover{
+            transform:translateY(-10px);
+        }
+
+        .card img{
+            width:100%;
+            height:220px;
+            object-fit:cover;
+        }
+
+        .card-content{
+            padding:20px;
+        }
+
+        .card-content h2{
+            margin-bottom:10px;
+        }
+
+        .card-content p{
+            color:gray;
+            line-height:24px;
+        }
+
+        .card-content button{
+            margin-top:15px;
+            padding:10px 20px;
+            border:none;
+            background:orange;
+            color:white;
+            border-radius:5px;
+            cursor:pointer;
+        }
+
+        /* FOOTER */
+
+        .footer{
+            width:100%;
+            background:black;
+            color:white;
+            text-align:center;
+            padding:20px;
+            font-size:18px;
+        }
+
+        /* RESPONSIVE DESIGN */
+
+        @media(max-width:768px){
+
+            nav{
+                flex-direction:column;
+                gap:15px;
+            }
+
+            ul{
+                justify-content:center;
+            }
+
+            .content h1{
+                font-size:35px;
+            }
+
+            .content p{
+                font-size:18px;
+            }
+
+            .s2{
+                flex-direction:column;
+                text-align:center;
+            }
+
+            .s2-text h1{
+                font-size:35px;
+            }
+        }
 
     </style>
 </head>
 
 <body>
+
+    <!-- NAVBAR -->
+
     <nav>
         <div class="logo">
             TRAVELER
         </div>
+
         <ul>
             <li><a href="">Home</a></li>
             <li><a href="">About</a></li>
             <li><a href="">Services</a></li>
             <li><a href="">Places</a></li>
-            
         </ul>
     </nav>
+
+    <!-- HERO SECTION -->
+
     <section class="s1">
         <div class="content">
-        <h1>LETS DESCRIBE THE WORLD TOGETHER</h1>
-        <p>WE PROVIDE BEST TOUR PACKEGES IN YOUR BUDGET</p>
-        <button class="btn1">Learn More</button>
-        <button class="btn2">Contact Us</button>
+            <h1>LET'S DISCOVER THE WORLD TOGETHER</h1>
+
+            <p>
+                We provide the best tour packages within your budget
+            </p>
+
+            <button class="btn1">Learn More</button>
+            <button class="btn2">Contact Us</button>
         </div>
     </section>
-    
+
+    <!-- ABOUT SECTION -->
 
     <section class="s2">
+
         <div class="s2-img">
-            <img src="japan.jpg">
+            <img src="japan.jpg" alt="Japan">
         </div>
+
         <div class="s2-text">
             <h4>Learn About Us</h4>
+
             <h1>DESTINATIONS</h1>
+
             <p>
-                Cultural Landmarks & History: Deep-dive articles on museums, historical sites, and local traditions.Outdoor Activities & Nature: Detailed guides to beaches, hiking trails, and birding spots, including maps."Best Hidden Gems": Blog posts or a "Secrets of [Destination]" section to create a unique value proposition.
+                Explore cultural landmarks, historical places,
+                beaches, hiking trails, and hidden gems around
+                the world. We help travelers experience the beauty
+                of every destination with comfort and affordability.
             </p>
-    
+
             <button>Learn More</button>
         </div>
+
     </section>
+
+    <!-- CARDS SECTION -->
+
+    <section class="s3">
+
+        <h1>Popular Places</h1>
+
+        <div class="cards">
+
+            <div class="card">
+                <img src="Paris.webp" alt="Paris">
+
+                <div class="card-content">
+                    <h2>Paris</h2>
+
+                    <p>
+                        Enjoy the beauty of the Eiffel Tower and
+                        explore amazing streets and cafes.
+                    </p>
+
+                    <button>Explore</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="maldives.jpg" alt="Maldives">
+
+                <div class="card-content">
+                    <h2>Maldives</h2>
+
+                    <p>
+                        Relax on beautiful beaches with crystal clear
+                        water and luxury resorts.
+                    </p>
+
+                    <button>Explore</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="Switzerland.webp" alt="Switzerland">
+
+                <div class="card-content">
+                    <h2>Switzerland</h2>
+
+                    <p>
+                        Experience snowy mountains, scenic views,
+                        and peaceful nature landscapes.
+                    </p>
+
+                    <button>Explore</button>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+
     <footer class="footer">
         <p>Copyright © 2026 All Rights Reserved</p>
     </footer>
+
 </body>
 </html>
